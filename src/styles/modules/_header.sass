@@ -1,0 +1,228 @@
+@import '../_mixins'
+
+.header
+    position: relative
+    width: 100%
+    background-color: #FFFFFF
+    border-bottom: 1px solid #27457C33
+    font-size: 1.8rem
+
+    @include for-phone-only
+        overflow-x: clip
+        .lang--page
+            display: none
+
+        button
+            font-size: 1.1rem
+            padding-inline: 1.1rem
+            border-radius: 10px
+    
+    .header--p
+        display: none
+
+        @include for-sm-only
+            display: none !important
+
+        @include for-tablet-only
+            display: flex !important
+            justify-content: space-between
+
+            a
+                margin-right: 1.5rem
+
+                &::after
+                    content: ""
+                    display: none
+
+    &--shadow
+        border: none
+        box-shadow: 0px 5px 8.699999809265137px 0px #CDCDCD8C
+
+    &_left
+        display: flex
+        align-items: center
+        gap: 5rem
+
+    &_inner 
+        display: flex
+        align-items: center
+        justify-content: space-between
+        height: 80px
+
+    &_loc
+        display: flex
+        align-items: center
+        gap: .8rem
+        cursor: pointer
+
+        @include for-tablet-only
+            display: none
+
+    &-lang
+        &--page
+            display: none
+
+        @include for-sm-only
+            &--links
+                display: flex
+            &--page
+                display: none
+
+        @include for-tablet-only
+            &--links    
+                display: none
+
+            &--page
+                display: flex
+    
+    .nav
+        display: flex
+
+        &--drop
+            .subtitle-block
+                display: none
+                &--popover
+                    display: block
+            .nav_links-popover
+                margin-right: 1.6rem
+                &:last-child
+                    margin-right: 0
+
+                &:hover
+                    .popover_block
+                        display: block
+                        
+            
+            @include for-sm-only
+                flex-wrap: wrap
+
+                width: 100%
+                max-width: 540px
+
+            @include for-tablet-only
+                display: none
+                position: absolute
+                top: 100%
+                right: 0
+                background-color: white
+                z-index: 70
+                flex-wrap: wrap
+                width: 100%
+                padding: 2rem
+                justify-content: space-between
+
+                &.active
+                    display: flex
+
+                svg
+                    margin-left: .5rem
+
+                .subtitle-block
+                    display: block
+                    color: #8C8C8C
+            @include for-phone-only
+                right: 50%
+                transform: translateX(50%)
+
+        &_links
+            margin-right: 3rem
+            position: relative
+            transition: color .2s linear
+
+            @include for-tablet-only
+                font-size: 1.3rem
+            
+            &:last-child
+                margin-right: 0
+
+            &::after 
+                content: ""
+                display: block
+                width: 0%
+                height: 2px
+                background-color: #02447F
+                position: absolute
+                bottom: -130%
+                margin-left: 50%
+                transform: translateY(100%) translateX(-50%)
+                transition: width .2s linear
+
+            &--drop
+                margin-right: 0
+                display: flex
+                align-items: center
+                gap: 1.3rem
+
+                position: relative
+
+                svg
+                    transition: transform .2s linear
+
+                &:hover 
+                    color: #94C325
+
+                    svg 
+                        transform: rotate(-180deg)
+                    
+                &::after   
+                    content: ""
+                    display: none
+                
+                @include for-sm-only
+                    margin-bottom: 1rem
+                
+                @include for-tablet-only
+                    display: block
+            
+            &--page
+                &:hover 
+                    color: #94C325
+                    &::after 
+                        width: 100%
+                @include for-tablet-only
+                    display: none
+
+            &-popover
+                @include for-tablet-only
+                    width: 250px
+                    margin-bottom: 2rem
+                    margin-right: 0!important
+                    a
+                        font-size: 1.8rem
+                @include for-phone-only
+                    width: 152px
+                    a
+                        font-size: 1.5rem
+                        font-weight: 700
+
+
+.burger
+    display: none
+    border: none
+    background-color: transparent
+
+    @include for-sm-only
+        &--page
+            display: none
+        &--links
+            display: block
+
+    @include for-phone-only
+        &--page
+            display: block
+        &--links
+            display: none
+
+    &_item
+        display: block
+        width: 22px
+        padding-block: .09rem
+        background-color: #02447F
+        margin-bottom: .8rem
+        border-radius: 2px
+
+        @include for-phone-only
+            margin-bottom: .6rem
+
+        &:last-child
+            margin-bottom: 0

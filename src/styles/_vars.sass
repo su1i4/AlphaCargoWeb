@@ -1,0 +1,57 @@
+@import './_mixins'
+
+// Flex
+
+.flex
+    display: flex
+
+.wrap
+    flex-wrap: wrap
+
+.items-center
+    align-items: center
+    
+.items-flex-start   
+    align-items: flex-start
+
+.item-flex-end
+    align-items: flex-end
+
+.content-between
+    justify-content: space-between
+
+.content-center
+    justify-content: center
+
+.content-around
+    justify-content: space-around
+
+.gap-l-8
+    gap: .8rem
+
+.gap-1_2
+    gap: 1.2rem
+
+.gap-2
+    gap: 2rem
+
+.gap-3
+    gap: 3rem
+
+
+// Cursor
+.pointer
+    cursor: pointer
+
+// margin
+
+.mb-3
+    margin-bottom: 3rem
+
+.mt-8
+    margin-top: 8rem
+
+// block
+.block-mb
+    @include for-sm-only
+        display: block

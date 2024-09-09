@@ -1,0 +1,57 @@
+@import '../_mixins'
+
+.title
+    font-size: 3.8rem
+    font-weight: 600
+    margin-bottom: 5rem
+
+    span.title--blue
+        color: #02447F 
+
+    span.title--green
+        color: #94C325 
+
+
+    @include for-phone-only
+        font-size: 1.8rem
+        margin-bottom: 2rem
+
+.title-sm
+    font-size: 6.4rem
+    font-weight: 600
+    margin-bottom: 1.6rem
+    color: #94C325
+
+    @include for-phone-only
+        font-size: 3.2rem
+        margin-bottom: 1.6rem
+
+.title-block
+    font-size: 2.4rem
+    font-weight: 600
+    margin-bottom: 1.6rem
+    
+    span
+        color: #94C325
+
+    @include for-phone-only
+        font-size: 1.5rem
+
+        &.title-block--footer
+            font-size: 1.8rem
+
+.subtitle-block
+    font-size: 1.8rem
+    font-weight: 400
+
+    &--gray
+        color: #8C8C8C
+
+    @include for-phone-only
+        font-size: 1.3rem
+
+.subtitle-block-mob
+    font-size: 1.5rem
+
+    @include for-phone-only
+        font-size: 1.3rem

@@ -1,0 +1,160 @@
+@import '../_mixins'
+
+.footer
+    width: 100%
+    background-color: #02447F
+    color: #fff
+    padding-top: 10rem
+    padding-bottom: 2.5rem
+
+    svg
+        display: none
+
+    .footer_search
+        position: relative
+
+        svg
+            display: block
+            position: absolute
+            top: 50%
+            right: 20px
+            transform: translateY(-50%)
+
+    @include for-sm-only   
+        display: none
+
+        &.footer-mob
+            display: block
+        
+        &--flex
+            margin-left: 5.9rem
+            justify-content: space-between
+            gap: 3.5rem 
+
+            @include for-tablet-only
+                display: block
+
+                .footer_link--mob
+                    display: none
+
+                .title-block
+                    margin-bottom: 3rem
+
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+
+                svg
+                    display: block
+                    margin-left: 1.5rem
+            
+            @include for-phone-only
+                margin-left: 5rem
+                width: 60%
+
+                svg
+                    display: block
+
+                .title-block
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+
+    @include for-phone-only
+        padding-top: 5rem
+
+        .footer_block--flex
+            width: 40%
+
+
+
+    &_link
+        display: block
+        margin-bottom: 1.6rem
+        font-size: 1.6rem
+        transition: color .2s linear
+
+        &:last-child
+            margin-bottom: 0
+
+        &:hover
+            color: #94C325
+
+    &_inner 
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+
+        border-bottom: 1px solid #FFFFFF33
+
+        padding-bottom: 5.3rem
+        margin-bottom: 2rem
+
+        @include for-phone-only
+            padding-bottom: 2rem
+
+        &--flex
+
+            @include for-sm-only
+                justify-content: flex-start
+
+    &_content
+        margin-top: 3rem
+
+        .flex
+            margin-bottom: 3rem
+
+
+.footer_mob-links
+    @include for-sm-only
+        .col-1
+            width: 50%
+            margin-right: 3rem
+
+        .col-2
+            width: 50%
+
+    @include for-tablet-only
+        .col-1  
+            width: 100%
+        
+        .col-2
+            width: 100%
+            margin-top: 5rem
+            display: flex
+            align-items: center
+            gap: 2rem
+
+        display: block
+
+.footer_priv
+    @include for-tablet-only
+        display: block
+        
+        .subtitle-block-mob
+            margin-bottom: 2rem
+
+.footer-mob
+    display: none
+
+    @include for-tablet-only
+        display: block
+
+        .nav
+            display: block!important
+
+            .footer_link--mob
+                font-size: 1.3rem
+                margin-bottom: 1.4rem
+
+                &.active
+                    display: block 
+
+        .title-block 
+            margin-bottom: 1.6rem !important
+            transition: transform .2s linear
+
+            &.active
+                transition: transform .2s linear
+                svg
+                    transform: rotate(180deg)

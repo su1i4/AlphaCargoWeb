@@ -1,0 +1,22 @@
+@import '_breakpoints'
+
+
+@mixin for-mobile-lg-only
+  @media (max-width: $mobile-lg)
+    @content
+
+@mixin for-phone-only
+  @media (max-width: $mobile)
+    @content
+
+@mixin for-tablet-only
+  @media (max-width: $tablet)
+    @content
+
+@mixin for-medium-only
+  @media (max-width: $md)
+    @content
+
+@mixin for-sm-only
+  @media (max-width: $sm)
+    @content
