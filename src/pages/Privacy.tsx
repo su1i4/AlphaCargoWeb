@@ -29,7 +29,7 @@ function useResponsivePadding() {
   return padding;
 }
 
-export const Privacy = () => {
+const Privacy = () => {
   const padding = useResponsivePadding();
 
   return (
@@ -227,3 +227,5 @@ export const Privacy = () => {
     </MainLayouts>
   );
 };
+
+export default Privacy;

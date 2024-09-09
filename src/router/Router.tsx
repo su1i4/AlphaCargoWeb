@@ -22,7 +22,7 @@ import Package from "../pages/profile/Package/Package";
 import Media from "../pages/Media";
 import Map from "../pages/Map";
 import Cargo from "../pages/Cargo";
-import { Privacy } from "../pages/Privacy";
+import Privacy from "../pages/Privacy";
 
 const Routers = () => {
   return (
