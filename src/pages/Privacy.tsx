@@ -219,6 +219,9 @@ export const Privacy = () => {
             персональных данных, вы можете обратиться к нам через службу
             поддержки Приложения.
           </p>
+          <p style={{display: 'flex', visibility: 'hidden'}} >
+            hello app store and google play
+          </p>
         </div>
       </div>
     </MainLayouts>
