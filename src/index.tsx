@@ -4,6 +4,7 @@ import "./styles/style.sass";
 import ModalManagerProvider from "./providers/ModalManagerProvider";
 import { Provider } from "react-redux";
 import { store } from "./store/store";
+//hello my name is sulaiman
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
