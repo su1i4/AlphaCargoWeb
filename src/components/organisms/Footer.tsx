@@ -113,7 +113,7 @@ const Footer = () => {
           </div>
 
           <div style={{display: 'flex', gap: '20px'}} className="flex gap-4">
-            <a href="/privacy" className="subtitle-block cursor-pointer hover:underline">Политика конфиденциальности</a>
+            <Link to="/privacy" className="subtitle-block cursor-pointer hover:underline">Политика конфиденциальности</Link>
             <div className="subtitle-block">Пользовательское соглашение</div>
           </div>
         </div>
@@ -281,9 +281,9 @@ export const FooterMobile: React.FC = () => {
           </div>
 
           <div className="footer_priv flex gap-2">
-            <a href="/privacy" className="subtitle-block subtitle-block-mob">
+            <Link to="/privacy" className="subtitle-block subtitle-block-mob">
               Политика конфиденциальности
-            </a>
+            </Link>
             <div className="subtitle-block subtitle-block-mob">
               Пользовательское соглашение
             </div>
